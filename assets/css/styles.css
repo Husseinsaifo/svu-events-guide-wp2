@@ -1,0 +1,138 @@
+/* ==========================================================
+   ملف التنسيق الرئيسي - مشروع فعاليات الجامعة الافتراضية
+   ========================================================== */
+
+:root {
+    --uni-primary: #2f4bcf;
+    --uni-primary-dark: #1e2f8f;
+    --uni-accent: #ff7a1a;
+    --uni-bg: #f5f7fb;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: var(--uni-bg);
+    color: #222;
+}
+
+/* ---------- الهيدر ---------- */
+.main-navbar {
+    background: linear-gradient(90deg, var(--uni-primary-dark), var(--uni-primary));
+}
+
+.main-navbar .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* ---------- الفوتر ---------- */
+.main-footer {
+    background: var(--uni-primary-dark);
+}
+
+/* ---------- الفعالية النشطة بالصفحة الرئيسية ---------- */
+.hero-active-event {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- بطاقات الفعاليات ---------- */
+.event-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-card .card-img-top {
+    height: 190px;
+    object-fit: cover;
+}
+
+/* ---------- تقييم النجوم بصفحة about.php ---------- */
+.rating-section {
+    background: #fff;
+}
+
+.star-rating {
+    font-size: 1.8rem;
+    color: #d5d5d5;
+    cursor: pointer;
+}
+
+.star-rating i {
+    margin-left: 4px;
+    transition: color 0.15s ease;
+}
+
+.star-rating i.active {
+    color: #ffb400;
+}
+
+/* ---------- زر العودة للأعلى ---------- */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 46px;
+    height: 46px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ---------- الوضع الليلي (Dark Mode) ---------- */
+body.dark-mode {
+    background-color: #14161c;
+    color: #e6e6e6;
+}
+
+body.dark-mode .hero-active-event,
+body.dark-mode .card,
+body.dark-mode .rating-section,
+body.dark-mode .modal-content {
+    background-color: #1f222b;
+    color: #e6e6e6;
+}
+
+body.dark-mode .text-muted {
+    color: #a5a9b8 !important;
+}
+
+body.dark-mode .table {
+    color: #e6e6e6;
+}
+
+/* زر تبديل الوضع الليلي داخل الناف بار */
+#darkModeToggle {
+    cursor: pointer;
+}
+
+/* ---------- لوحة تحكم الأدمن ---------- */
+.admin-sidebar {
+    background: var(--uni-primary-dark);
+    min-height: 100vh;
+}
+
+.admin-sidebar a {
+    color: #dfe3ff;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
